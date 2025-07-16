@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy Engine - Command Your Compliance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617; /* slate-950 */
+            color: #e2e8f0; /* slate-200 */
+        }
+        .section-title {
+            @apply text-3xl md:text-5xl font-extrabold text-white text-center;
+        }
+        .section-subtitle {
+            @apply mt-4 text-lg text-slate-400 text-center max-w-3xl mx-auto;
+        }
+        .card {
+            @apply bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 md:p-8 transition-all duration-300 hover:bg-slate-800/80 hover:border-blue-500 hover:-translate-y-2;
+        }
+        
+        /* Scroll-triggered Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            animation-timeline: view();
+            animation-range-start: entry 10%;
+            animation-range-end: entry 40%;
+            opacity: 0;
+        }
+
+        /* Hero background */
+        .hero-bg {
+            background-image: radial-gradient(circle at 50% 50%, rgba(13, 35, 83, 0.5), transparent 60%);
+        }
+    </style>
+</head>
+<body class="text-slate-300">
+
+    <!-- Header & Navigation -->
+    <header class="bg-slate-950/70 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <svg class="h-8 w-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                <h1 class="text-2xl font-bold text-white">Policy Engine</h1>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#problem" class="text-slate-300 hover:text-blue-400 transition">The Problem</a>
+                <a href="#solution" class="text-slate-300 hover:text-blue-400 transition">The "Wow" Factor</a>
+                <a href="#how-it-works" class="text-slate-300 hover:text-blue-400 transition">How It Works</a>
+                <a href="#why-now" class="text-slate-300 hover:text-blue-400 transition">Why Now?</a>
+            </nav>
+            <a href="#contact" class="hidden md:inline-block bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-[0_0_15px_rgba(59,130,246,0.5)]">Request a Demo</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section id="hero" class="py-24 md:py-40 relative overflow-hidden hero-bg">
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white mt-4 leading-tight tracking-tight animate-[fadeIn_1s_ease-in-out]">
+                    Stop Chasing Compliance.
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-300">Start Commanding It.</span>
+                </h1>
+                <p class="mt-6 text-lg md:text-xl text-slate-300 max-w-3xl mx-auto animate-[fadeInUp_1s_ease-in-out_0.3s] opacity-0">
+                    Policy Engine is the AI-powered command center for enterprise contracts. Turn dense legal documents into strategic assets, automatically enforced by your company's policies.
+                </p>
+                <div class="mt-10 flex justify-center items-center space-x-4 animate-[fadeInUp_1s_ease-in-out_0.6s] opacity-0">
+                    <a href="#solution" class="bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-blue-700 transition-transform hover:scale-105 shadow-[0_0_20px_rgba(59,130,246,0.6)]">See The "Wow" Factor</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section id="problem" class="py-20 md:py-28 bg-slate-900">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title fade-in-up">Your Contracts Are A Blind Spot. Until Now.</h2>
+                <p class="section-subtitle fade-in-up">Manual review isn't just slow—it's a high-stakes gamble. Hidden risks, missed obligations, and policy deviations are silently costing you millions and exposing you to catastrophic compliance failures.</p>
+                <div class="mt-16 grid md:grid-cols-3 gap-8">
+                    <div class="card fade-in-up">
+                        <i data-lucide="file-text" class="w-10 h-10 text-red-400"></i>
+                        <h3 class="mt-6 text-xl font-bold text-white">Lost in Legalese</h3>
+                        <p class="mt-2 text-slate-400">Thousands of non-standard contracts create a web of complexity that no human team can effectively manage.</p>
+                    </div>
+                    <div class="card fade-in-up" style="animation-delay: 0.2s;">
+                         <i data-lucide="alert-triangle" class="w-10 h-10 text-yellow-400"></i>
+                        <h3 class="mt-6 text-xl font-bold text-white">Ticking Time Bombs</h3>
+                        <p class="mt-2 text-slate-400">Outdated terms, missing clauses, and non-compliant language lie dormant, waiting to become your next crisis.</p>
+                    </div>
+                    <div class="card fade-in-up" style="animation-delay: 0.4s;">
+                        <i data-lucide="bar-chart-big" class="w-10 h-10 text-green-400"></i>
+                        <h3 class="mt-6 text-xl font-bold text-white">Strategic Paralysis</h3>
+                        <p class="mt-2 text-slate-400">Can't answer "Which contracts have Net 90 terms?" You're flying blind, unable to make data-driven decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution / "Wow Factor" Section -->
+        <section id="solution" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center fade-in-up">
+                    <span class="text-blue-400 font-semibold">THE UNFAIR ADVANTAGE</span>
+                    <h2 class="section-title mt-2">This is Policy-Centric Intelligence.</h2>
+                    <p class="section-subtitle">Policy Engine doesn't just read contracts. It understands your rules, applies them with machine precision, and gives you a single pane of glass to control your entire contractual landscape.</p>
+                </div>
+                <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8 fade-in-up">
+                    <div class="card">
+                        <i data-lucide="code" class="w-8 h-8 text-blue-400"></i>
+                        <h3 class="mt-4 text-lg font-bold text-white">Executable Policies</h3>
+                        <p class="text-slate-400 mt-1">Transform your static internal policies into dynamic, executable rules that the AI uses to analyze every contract.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="brain-circuit" class="w-8 h-8 text-blue-400"></i>
+                        <h3 class="mt-4 text-lg font-bold text-white">Hybrid Intelligence</h3>
+                        <p class="text-slate-400 mt-1">Our engine combines flexible, rule-based logic with advanced Machine Learning to catch nuances others miss.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="globe" class="w-8 h-8 text-blue-400"></i>
+                        <h3 class="mt-4 text-lg font-bold text-white">Live Sync</h3>
+                        <p class="text-slate-400 mt-1">Connect to external policy APIs (e.g., ISO, GDPR updates) for real-time compliance adjustments across your portfolio.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-blue-400"></i>
+                        <h3 class="mt-4 text-lg font-bold text-white">Fortress-Level Security</h3>
+                        <p class="text-slate-400 mt-1">Deploy on-premise with a local LLM, ensuring your most sensitive contract data never leaves your control.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="py-20 md:py-28 bg-slate-900">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title fade-in-up">From Chaos to Control in 3 Steps</h2>
+                <p class="section-subtitle fade-in-up">Our intelligent workflow transforms contract management from a reactive chore into a proactive, strategic function.</p>
+                <div class="mt-20 grid lg:grid-cols-3 gap-12 text-left fade-in-up">
+                    <!-- Step 1 -->
+                    <div>
+                        <div class="flex items-center space-x-4">
+                           <div class="w-12 h-12 rounded-full bg-slate-800 border-2 border-blue-500 flex items-center justify-center text-xl font-bold text-blue-400 flex-shrink-0">1</div>
+                           <h3 class="text-2xl font-bold text-white">Analyze Instantly</h3>
+                        </div>
+                        <ul class="mt-6 space-y-3 text-slate-400 border-l border-slate-700 pl-6 ml-6">
+                            <li><strong class="text-slate-200">Universal Ingestion:</strong> Drag & drop, SharePoint, email, or cloud sync.</li>
+                            <li><strong class="text-slate-200">Instant Scoring:</strong> Get immediate Policy Compliance and Risk scores.</li>
+                            <li><strong class="text-slate-200">Auto-Classification:</strong> Automatically detects contract type (MSA, NDA, etc.).</li>
+                            <li><strong class="text-slate-200">Clause-Level Views:</strong> See your contract organized by policy relevance.</li>
+                        </ul>
+                    </div>
+                     <!-- Step 2 -->
+                    <div>
+                        <div class="flex items-center space-x-4">
+                           <div class="w-12 h-12 rounded-full bg-slate-800 border-2 border-blue-500 flex items-center justify-center text-xl font-bold text-blue-400 flex-shrink-0">2</div>
+                           <h3 class="text-2xl font-bold text-white">Remediate with AI</h3>
+                        </div>
+                        <ul class="mt-6 space-y-3 text-slate-400 border-l border-slate-700 pl-6 ml-6">
+                            <li><strong class="text-slate-200">Smart Suggestions:</strong> AI proposes better wording for ambiguous or risky clauses.</li>
+                            <li><strong class="text-slate-200">Human-in-the-Loop:</strong> Legal, procurement, and compliance collaborate in a tracked editor.</li>
+                            <li><strong class="text-slate-200">Risk Indicators:</strong> Every section is flagged with its specific risk level.</li>
+                            <li><strong class="text-slate-200">Rule Engine:</strong> ML tags clauses while the rule engine flags missing or forbidden terms.</li>
+                        </ul>
+                    </div>
+                     <!-- Step 3 -->
+                    <div>
+                        <div class="flex items-center space-x-4">
+                           <div class="w-12 h-12 rounded-full bg-slate-800 border-2 border-blue-500 flex items-center justify-center text-xl font-bold text-blue-400 flex-shrink-0">3</div>
+                           <h3 class="text-2xl font-bold text-white">Approve with Confidence</h3>
+                        </div>
+                        <ul class="mt-6 space-y-3 text-slate-400 border-l border-slate-700 pl-6 ml-6">
+                            <li><strong class="text-slate-200">Multi-Stage Workflows:</strong> Route from Legal to Procurement to Risk to Sign-off.</li>
+                            <li><strong class="text-slate-200">Full Audit Trail:</strong> Track every comment, suggestion, and version change.</li>
+                            <li><strong class="text-slate-200">Clear Statuses:</strong> Follow contracts from Draft → Under Review → Approved → Executed.</li>
+                            <li><strong class="text-slate-200">Accountability:</strong> Send back to definers for problematic or missing clauses.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Architecture Section -->
+        <section id="architecture" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title fade-in-up">The Enterprise-Grade Core</h2>
+                <p class="section-subtitle fade-in-up">
+                    Policy Engine is more than an application; it's a platform. Built for security, scalability, and seamless integration into your existing tech stack.
+                </p>
+                <div class="mt-16 grid lg:grid-cols-3 gap-8 text-left fade-in-up">
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-blue-400 mb-4">Shared Services APIs</h3>
+                        <ul class="space-y-2 text-slate-300">
+                            <li><i data-lucide="database" class="inline w-4 h-4 mr-2"></i> Document Ingestion API</li>
+                            <li><i data-lucide="search" class="inline w-4 h-4 mr-2"></i> Semantic Search API</li>
+                            <li><i data-lucide="file-text" class="inline w-4 h-4 mr-2"></i> Data Extraction API</li>
+                            <li><i data-lucide="shield" class="inline w-4 h-4 mr-2"></i> Risk & Rule Evaluation API</li>
+                            <li><i data-lucide="rss" class="inline w-4 h-4 mr-2"></i> Regulatory Feed API</li>
+                            <li><i data-lucide="terminal" class="inline w-4 h-4 mr-2"></i> Prompt Execution API</li>
+                            <li><i data-lucide="folder-check" class="inline w-4 h-4 mr-2"></i> Audit & Analytics API</li>
+                        </ul>
+                    </div>
+                    <div class="card border-2 border-blue-500 shadow-[0_0_25px_rgba(59,130,246,0.3)]">
+                        <h3 class="text-xl font-bold text-blue-400 mb-4">Core AI Platform</h3>
+                        <ul class="space-y-2 text-slate-300">
+                            <li><i data-lucide="library" class="inline w-4 h-4 mr-2"></i> Knowledge Graph + RAG</li>
+                            <li><i data-lucide="file-cog" class="inline w-4 h-4 mr-2"></i> Document Intelligence Engine</li>
+                            <li class="p-3 bg-blue-900/30 rounded-md"><i data-lucide="gavel" class="inline w-4 h-4 mr-2 text-blue-300"></i> <strong class="text-white">Compliance & Policy Engine</strong></li>
+                            <li><i data-lucide="cpu" class="inline w-4 h-4 mr-2"></i> Prompt & Guardrail Layer</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold text-blue-400 mb-4">AI Products</h3>
+                        <ul class="space-y-2 text-slate-300">
+                            <li><i data-lucide="file-check-2" class="inline w-4 h-4 mr-2"></i> Three-Way Invoice Matching</li>
+                            <li><i data-lucide="compass" class="inline w-4 h-4 mr-2"></i> Regulatory Compliance Tracker</li>
+                            <li><i data-lucide="book-open" class="inline w-4 h-4 mr-2"></i> Knowledge Management Copilot</li>
+                            <li><i data-lucide="pen-tool" class="inline w-4 h-4 mr-2"></i> RFP Management Assistant</li>
+                            <li><i data-lucide="heart-pulse" class="inline w-4 h-4 mr-2"></i> Insurance Underwriting Copilot</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Now Section -->
+        <section id="why-now" class="py-20 md:py-28 bg-blue-900/20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title fade-in-up">The Market Demands a New Standard</h2>
+                <p class="section-subtitle fade-in-up">The convergence of AI adoption and tightening regulations like the EU AI Act creates an urgent, undeniable need for a new class of compliance tool.</p>
+                <div class="mt-16 max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+                    <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700 fade-in-up">
+                        <h3 class="text-lg font-bold text-white">AI Acceleration</h3>
+                        <p class="mt-1 text-slate-400">GenAI is everywhere, demanding robust governance.</p>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700 fade-in-up" style="animation-delay: 0.15s;">
+                        <h3 class="text-lg font-bold text-white">Regulatory Pressure</h3>
+                        <p class="mt-1 text-slate-400">The EU AI Act mandates explainability and human oversight.</p>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700 fade-in-up" style="animation-delay: 0.3s;">
+                        <h3 class="text-lg font-bold text-white">Trust Deficit</h3>
+                        <p class="mt-1 text-slate-400">Enterprises need auditable automation, not black boxes.</p>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700 fade-in-up" style="animation-delay: 0.45s;">
+                        <h3 class="text-lg font-bold text-white">Human-in-the-Loop</h3>
+                        <p class="mt-1 text-slate-400">The future is AI empowering humans, not replacing them.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / Contact Section -->
+        <section id="contact" class="py-20 md:py-32 bg-gradient-to-t from-blue-950/50 to-transparent">
+            <div class="container mx-auto px-6 text-center fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-white">
+                    Ready to Command Your Compliance?
+                </h2>
+                <p class="mt-4 text-lg text-slate-300 max-w-2xl mx-auto">
+                    Schedule a personalized demo and see how Policy Engine will become the most valuable tool in your risk and compliance arsenal.
+                </p>
+                <div class="mt-10">
+                    <a href="mailto:sales@policyengine.example.com" class="bg-blue-600 text-white font-bold px-10 py-5 rounded-lg text-xl hover:bg-blue-700 transition-transform hover:scale-105 inline-block shadow-[0_0_25px_rgba(59,130,246,0.7)]">Book Your Strategic Demo</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-500">
+            <p>&copy; 2025 Policy Engine Inc. All rights reserved.</p>
+            <p class="text-sm mt-2">The future of contracts is explainable, collaborative, and commanded.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
